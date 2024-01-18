@@ -87,7 +87,7 @@ io.on("connection", (socket) => {
 
   //when user dissconnects
   socket.on("disconnect", () => {
-    const getUser = getUser(socket.id);
+    const user = getUser(socket.id);
     userLeavesApp(socket.id);
 
     if (user) {
